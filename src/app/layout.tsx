@@ -16,7 +16,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="ko">
-            <body className={inter.className}>{children}</body>
+            <body className={inter.className}>
+                <header className="w-full h-[60px] bg-[#3477ff] text-center content-center">
+                    <h2 className="font-bold">나만의 포켓몬 리스트 도감</h2>
+                </header>
+                {children}
+            </body>
         </html>
     );
 }
