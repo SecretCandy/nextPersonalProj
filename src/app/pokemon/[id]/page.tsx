@@ -7,7 +7,7 @@ const pokemonDetailPage = async ({ params }: { params: { id: string } }) => {
     const pokemon = await fetchPokemonData(params.id);
 
     return (
-        <div className="pokemon-details max-w-xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+        <div className="pokemon-details max-w-xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-24">
             <div className="bg-gray-100 text-gray-800 text-center p-4">
                 <h2 className="text-2xl font-bold">{pokemon.korean_name}</h2>
                 <p>No. {pokemon.id.toString().padStart(4, "0")}</p>
@@ -29,8 +29,7 @@ const pokemonDetailPage = async ({ params }: { params: { id: string } }) => {
                         무게: {pokemon.weight / 10} kg
                     </p>
                 </div>
-
-                <div className="text-center my-2">
+                <div className="text-center my-2 pt-2">
                     <p className="font-bold mb-5">기술:</p>
                     <div className="flex flex-wrap gap-2 items-center text-center justify-center">
                         {pokemon.moves.map((move: any) => (
